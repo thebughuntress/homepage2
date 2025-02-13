@@ -85,7 +85,12 @@ function Contact() {
           </IconButton>
         ))}
       </Box>
-      <Button variant="outlined" startIcon={<EmailIcon />} sx={{ my: 2 }}>
+      <Button
+        variant="outlined"
+        startIcon={<EmailIcon />}
+        sx={{ marginBottom: 2 }}
+        href="mailto:antonia.frey@outlook.com"
+      >
         Contact Me
       </Button>
     </Box>

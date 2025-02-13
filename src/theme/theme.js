@@ -15,6 +15,9 @@ const theme = createTheme({
     text: {
       primary: "#ffffff",
     },
+    gray:{
+      primary: "#A9A9A9",
+    }
   },
   typography: {
     fontFamily: "'Roboto', sans-serif",
@@ -59,6 +62,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: "white",
+          border: "2px solid",
           borderColor: "white",
           borderRadius: "25px",
           textTransform: "none",

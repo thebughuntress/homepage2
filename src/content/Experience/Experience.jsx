@@ -82,18 +82,18 @@ function Experience() {
                       {exp.company}
                     </Typography>
 
-                    <Typography variant="body1" sx={{ color: "gray" }}>
+                    <Typography variant="body1" sx={{ color: "gray.primary" }}>
                       {exp.startDate} - {exp.endDate}
                     </Typography>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                       <LocationOnIcon
                         sx={{
                           fontSize: "20px",
-                          color: "gray",
+                          color: "gray.primary",
                           marginRight: "2px",
                         }}
                       />
-                      <Typography variant="body1" sx={{ color: "gray" }}>
+                      <Typography variant="body1" sx={{ color: "gray.primary" }}>
                         {exp.location}
                       </Typography>
                     </Box>

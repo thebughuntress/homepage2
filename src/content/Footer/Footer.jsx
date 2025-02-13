@@ -18,6 +18,7 @@ function Footer() {
           backgroundColor: "black",
           padding: "20px",
           textAlign: "center",
+          marginTop: 5,
         }}
       >
         {/* Scroll to Top Button */}
@@ -29,6 +30,8 @@ function Footer() {
             height: "40px",
             width: "40px",
             borderRadius: "50%",
+            borderColor: "white",
+            border: "2px solid",
           }}
         >
           <KeyboardArrowUpIcon />

@@ -9,6 +9,7 @@ import {
   Box,
   Button,
   useTheme,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./AppBar.css";
@@ -37,7 +38,8 @@ function AppBar() {
       <MuiAppBar
         position="static"
         sx={{
-          backgroundColor: theme.palette.background.default, // Use color from theme
+          backgroundColor: theme.palette.background.default,
+          py: 1,
         }}
       >
         <Toolbar>
@@ -45,7 +47,6 @@ function AppBar() {
           <Typography variant="h3" className="gradient-text">
             {"<AAF/>"}
           </Typography>
-
           {/* Right Side: Links on larger screens */}
           {!isMobile && (
             <Box sx={{ display: "flex", marginRight: 3 }}>
@@ -60,6 +61,7 @@ function AppBar() {
                     "&:hover": {
                       backgroundColor: "rgba(0, 0, 0, 0.1)",
                     },
+                    border: "none",
                   }}
                 >
                   {text}
@@ -67,7 +69,6 @@ function AppBar() {
               ))}
             </Box>
           )}
-
           {/* Menu Icon for mobile view */}
           {isMobile && (
             <IconButton
@@ -90,31 +91,57 @@ function AppBar() {
         sx={{
           "& .MuiDrawer-paper": {
             width: 250,
-            paddingTop: 8,
+            height: "100vh",
           },
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          {menuLinks.map((text) => (
-            <Button
-              key={text}
-              onClick={() => {
-                // First close the drawer, then scroll to the section
-                toggleDrawer();
-                handleScroll(text);
-              }}
-              sx={{
-                color: "black",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                "&:hover": {
-                  backgroundColor: "rgba(0, 0, 0, 0.1)",
-                },
-              }}
-            >
-              {text}
-            </Button>
-          ))}
+        <Box
+          sx={{
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              paddingY: 5,
+              gap: 2,
+            }}
+          >
+            {menuLinks.map((text) => (
+              <Button
+                key={text}
+                onClick={() => {
+                  // First close the drawer, then scroll to the section
+                  toggleDrawer();
+                  handleScroll(text);
+                }}
+                sx={{
+                  color: "black",
+                  textTransform: "uppercase",
+                  fontWeight: 700,
+                  border: "none",
+                }}
+              >
+                {text}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 1 }} /> {/* Spacer to push content down */}
+          <Box>
+            <Typography variant="h6" textAlign="center" sx={{ py: 2 }}>
+              <Link
+                href="https:antoniaalicefrey.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: "secondary.main", textDecoration: "none" }}
+              >
+                antoniaalicefrey.com
+              </Link>
+            </Typography>
+          </Box>
         </Box>
       </Drawer>
     </>

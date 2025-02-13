@@ -21,10 +21,19 @@ function Hero() {
         alt="avatar"
         src={avatar}
       />
-      <Typography variant="h1" sx={{ fontSize: { xs: "2.2rem", md: "inherit" } }}>
+      <Typography
+        variant="h1"
+        sx={{ fontSize: { xs: "2.2rem", md: "inherit" } }}
+      >
         Antonia Frey
       </Typography>
-      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xs: 1, md: 0 },
+        }}
+      >
         <Typography variant="h4" sx={{ fontWeight: 700, marginRight: 1 }}>
           Turning Ideas into Code &{" "}
         </Typography>
@@ -48,7 +57,10 @@ function Hero() {
         </Typography>
       </Box>
 
-      <Typography variant="h5" sx={{ width: {xs: "90%", md: "60%"}, textAlign: "center" }}>
+      <Typography
+        variant="h5"
+        sx={{ width: { xs: "90%", md: "60%" }, textAlign: "center" }}
+      >
         <b>Hey!</b> I'm a full-stack developer who loves building efficient,
         scalable, and user-friendly applications that make life easier. I build
         software and teach programming.
