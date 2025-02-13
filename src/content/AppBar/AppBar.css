@@ -1,0 +1,30 @@
+/* Global Keyframe Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply animation to the text */
+.gradient-text {
+  background: linear-gradient(
+    131deg,
+    rgb(156, 131, 255) 12%,
+    rgba(224, 240, 16, 0.94) 70%,
+    rgb(255, 144, 81) 75%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  animation: gradientMove 4s linear infinite;
+  flex-grow: 1;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
