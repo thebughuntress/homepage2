@@ -10,8 +10,10 @@ import {
   Button,
   useTheme,
   Link,
+  Fab,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import "./AppBar.css";
 
 function AppBar() {
@@ -23,7 +25,7 @@ function AppBar() {
     setOpen(!open);
   };
 
-  const menuLinks = ["About Me", "Experience", "Projects", "Contact"];
+  const menuLinks = ["About Me", "Experience", "Projects", "Certifications", "Contact"];
 
   const handleScroll = (text) => {
     let id = text.replace(" ", "-").toLowerCase();
@@ -100,6 +102,8 @@ function AppBar() {
             height: "100vh",
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Box
@@ -128,18 +132,25 @@ function AppBar() {
                 {text}
               </Button>
             ))}
+            <IconButton
+              aria-label="close-appbar"
+              color="black"
+              onClick={toggleDrawer}
+            >
+              <KeyboardDoubleArrowRightIcon />
+            </IconButton>
           </Box>
           <Box sx={{ flexGrow: 1 }} /> {/* Spacer to push content down */}
-          <Box>
-            <Typography variant="h6" textAlign="center" sx={{ py: 2 }}>
-              <Link
-                href="https:antoniaalicefrey.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ color: "secondary.main", textDecoration: "none" }}
-              >
-                antoniaalicefrey.com
-              </Link>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              height: "15vh",
+            }}
+          >
+            <Typography variant="h3" className="gradient-text">
+              {"<AAF/>"}
             </Typography>
           </Box>
         </Box>

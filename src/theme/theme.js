@@ -16,7 +16,7 @@ const theme = createTheme({
       primary: "#ffffff",
     },
     gray:{
-      primary: "#A9A9A9",
+      primary: "#f5f5f5",
     }
   },
   typography: {
@@ -51,7 +51,7 @@ const theme = createTheme({
       fontWeight: 400,
     },
     body1: {
-      fontSize: "0.9rem", // Increased to 0.9rem for better legibility
+      fontSize: "1rem", // Increased to 0.9rem for better legibility
     },
     body2: {
       fontSize: "0.7rem", // Adjusted for consistency

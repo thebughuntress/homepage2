@@ -57,9 +57,16 @@ function Experience() {
         <Table>
           <TableBody>
             {experiences.map((exp, index) => (
-              <TableRow key={index}>
+              <TableRow
+                key={index}
+                sx={{
+                  borderBottom: "2px solid rgba(255, 255, 255, 0.2)",
+                }}
+              >
                 {/* Image Column */}
-                <TableCell sx={{ width: "100px" }}>
+                <TableCell
+                  sx={{ width: "100px", verticalAlign: "center", py: 2 }}
+                >
                   <img
                     src={exp.image}
                     alt={exp.company}
@@ -71,7 +78,7 @@ function Experience() {
                 </TableCell>
 
                 {/* Content Column */}
-                <TableCell sx={{ paddingX: "50px" }}>
+                <TableCell sx={{ paddingX: { xs: "5px", md: "50px" } }}>
                   <Box
                     sx={{ display: "flex", flexDirection: "column", gap: 1 }}
                   >
@@ -93,7 +100,10 @@ function Experience() {
                           marginRight: "2px",
                         }}
                       />
-                      <Typography variant="body1" sx={{ color: "gray.primary" }}>
+                      <Typography
+                        variant="body1"
+                        sx={{ color: "gray.primary" }}
+                      >
                         {exp.location}
                       </Typography>
                     </Box>

@@ -11,6 +11,7 @@ import AboutMe from "./content/AboutMe/AboutMe";
 import Experience from "./content/Experience/Experience";
 import Contact from "./content/Contact/Contact";
 import Projects from "./content/Projects/Projects";
+import Certifications from "./content/Certifications/Certifications";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <AboutMe />
         <Experience />
         <Projects />
+        <Certifications/>
         <Contact />
         <Footer />
       </Box>

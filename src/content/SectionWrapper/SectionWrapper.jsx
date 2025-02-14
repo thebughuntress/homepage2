@@ -11,7 +11,6 @@ function SectionWrapper({ title, id, children }) {
         flexDirection: "column",
         gap: 1,
         paddingY: 4,
-        paddingX: {xs: "5%", md: "15%"},
       }}
     >
       <Typography variant="h3">{title}</Typography>
@@ -28,7 +27,15 @@ function SectionWrapper({ title, id, children }) {
       >
         Explore Now
       </Typography>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+          //backgroundColor: "red",
+          width: { xs: "90%", md: "70%" },
+        }}
+      >
         {children}
       </Box>
     </Box>

@@ -13,11 +13,16 @@ function Hero() {
         alignItems: "center",
         flexDirection: "column",
         gap: 2,
-        marginTop: "-20px",
+        marginTop: { xs: "-80px", md: "-20px" },
       }}
     >
       <Avatar
-        sx={{ bgcolor: "secondary.main", width: "140px", height: "140px" }}
+        sx={{
+          bgcolor: "secondary.main",
+          width: "140px",
+          height: "140px",
+          p: 2,
+        }}
         alt="avatar"
         src={avatar}
       />
@@ -37,24 +42,27 @@ function Hero() {
         <Typography variant="h4" sx={{ fontWeight: 700, marginRight: 1 }}>
           Turning Ideas into Code &{" "}
         </Typography>
-        <Typography
-          variant="h4"
+        <Box
           sx={{
-            background:
-              "linear-gradient(131deg, rgb(156, 131, 255) 42%, rgba(224, 240, 16, 0.94) 70%, rgb(255, 144, 81) 75%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            fontWeight: 700,
+            display: "flex",
           }}
         >
-          Making the Web Cooler
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{ marginLeft: "2px", display: { xs: "none", md: "block" } }}
-        >
-          🚀
-        </Typography>
+          <Typography
+            variant="h4"
+            sx={{
+              background:
+                "linear-gradient(131deg, rgb(156, 131, 255) 42%, rgba(224, 240, 16, 0.94) 70%, rgb(255, 144, 81) 75%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontWeight: 700,
+            }}
+          >
+            Making the Web Cooler
+          </Typography>
+          <Typography variant="h5" sx={{ marginLeft: "2px" }}>
+            🚀
+          </Typography>
+        </Box>
       </Box>
 
       <Typography

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Fab, Link } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import BuyMeACoffee from "../BuyMeACoffee/BuyMeACoffee";
 
 function Footer() {
   const handleScrollToTop = () => {
@@ -36,16 +37,8 @@ function Footer() {
         >
           <KeyboardArrowUpIcon />
         </Fab>
-        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          <Link
-            href="https:antoniaalicefrey.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            color="inherit"
-          >
-            antoniaalicefrey.com
-          </Link>
-        </Typography>
+
+        <BuyMeACoffee />
 
         <Box
           sx={{
@@ -56,11 +49,22 @@ function Footer() {
           }}
         >
           <Typography variant="body1">
-            Built with Vite and MUI, deployed with Firebase.
+            Built with ReactJS, Vite and MUI, deployed with Firebase.
           </Typography>
         </Box>
 
-        <Typography variant="body2" sx={{ marginTop: 3 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", my: 1 }}>
+          <Link
+            href="https:antoniaalicefrey.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit"
+          >
+            antoniaalicefrey.com
+          </Link>
+        </Typography>
+
+        <Typography variant="body2" sx={{ marginTop: 2 }}>
           &copy; {new Date().getFullYear()} Antonia Alice Frey. All rights
           reserved.
         </Typography>

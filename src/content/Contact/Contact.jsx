@@ -52,7 +52,7 @@ function Contact() {
           textTransform: "none",
         }}
       >
-        Let's connect
+        Let's connect!
       </Typography>
       <Typography variant="body1">Talking is better in person.</Typography>
 

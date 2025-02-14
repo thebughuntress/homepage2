@@ -107,8 +107,20 @@ const technologies = [
     img: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
   {
+    label: "LaTex",
+    img: "https://www.latex-project.org/about/logos/latex-project-logo_288x288.svg",
+  },
+  {
+    label: "Docker",
+    img: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+  },
+  {
     label: "MongoDB",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
+  },
+
+  {label: "Kubernetes (CKAD)",
+    img: "https://pbs.twimg.com/profile_images/511909265720614913/21_d3cvM_400x400.png"
   },
   {
     label: "Git",
@@ -119,7 +131,7 @@ const technologies = [
 function Projects() {
   return (
     <SectionWrapper title="Projects" id="projects">
-      <Typography>
+      <Typography variant="body1">
         In my past projects at work, university, and during my free time, I have
         worked with a variety of technologies and tools. My personal{" "}
         <Link
