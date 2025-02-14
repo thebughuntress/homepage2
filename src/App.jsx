@@ -21,6 +21,8 @@ function App() {
         id="top"
         sx={{
           backgroundImage: `url(${BackgroundPattern})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPositionX: "right",
         }}
       >
         <AppBar />
@@ -28,7 +30,7 @@ function App() {
         <AboutMe />
         <Experience />
         <Projects />
-        <Certifications/>
+        <Certifications />
         <Contact />
         <Footer />
       </Box>
