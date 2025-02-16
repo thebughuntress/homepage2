@@ -20,8 +20,8 @@ function Experience() {
       startDate: "Feb. 2022",
       endDate: "Present",
       company: "Devoteam GmbH",
-      position: "Senior Software Engineer",
-      location: "Remote",
+      position: "Software Engineer (Senior)",
+      location: "Remote | Frankfurt, Germany",
       image: devoteamLogo,
     },
     {
@@ -30,7 +30,8 @@ function Experience() {
       company: "Superprof",
       position: "Tutoring (Python, Java, Web) & Freelance",
       location: "Remote",
-      image: "https://s3-eu-west-1.amazonaws.com/tpd/logos/5e5d075094f7cb00015e5dca/0x0.png",
+      image:
+        "https://s3-eu-west-1.amazonaws.com/tpd/logos/5e5d075094f7cb00015e5dca/0x0.png",
     },
     {
       startDate: "Jan. 2021",

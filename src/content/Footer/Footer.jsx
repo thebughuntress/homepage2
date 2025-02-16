@@ -49,7 +49,7 @@ function Footer() {
           }}
         >
           <Typography variant="body1">
-            Built with ReactJS, Vite and MUI, deployed with Firebase.
+            Built with ReactJS, Vite and MUI, deployed on Github Pages.
           </Typography>
         </Box>
 

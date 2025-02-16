@@ -1,5 +1,30 @@
+import Project from "../Project/Project";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 import { Typography, Box, Chip, Link } from "@mui/material";
+
+const projects = [
+  {
+    name: "Django Portfolio Page",
+    description:
+      "Django-based web application, this project includes a blog where you can read posts.",
+    img: "https://automationpanda.com/wp-content/uploads/2017/09/django-logo-negative.png",
+    repo: "https://github.com/thebughuntress/my-django-site",
+  },
+  {
+    name: "Homepage",
+    description:
+      "My personal homepage displaying my technical expertise and projects, built with Vite, React, and JavaScript using Material UI. Deployed on Github Pages and Firebase.",
+    img: "https://jaygould.co.uk/static/a540c5d36e6d0b33716ed77fa4a00bc3/c1b63/react.png",
+    repo: "https://github.com/thebughuntress/homepage2",
+  },
+  {
+    name: "Java Calculator-App",
+    description:
+      "Simple calculator application built with Java. It performs basic  arithmetic operations like addition, subtraction, multiplication, and division.",
+    img: "https://raw.githubusercontent.com/thebughuntress/calculator-app/main/images/calculator-app.png",
+    repo: "https://github.com/thebughuntress/calculator-app",
+  },
+];
 
 const technologies = [
   {
@@ -12,7 +37,7 @@ const technologies = [
   },
   {
     label: "NodeJS",
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+    img: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703155483443/e42a7be2-890a-4bd2-accf-306e53ccebbd.png",
   },
   {
     label: "React",
@@ -119,8 +144,9 @@ const technologies = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
   },
 
-  {label: "Kubernetes (CKAD)",
-    img: "https://pbs.twimg.com/profile_images/511909265720614913/21_d3cvM_400x400.png"
+  {
+    label: "Kubernetes (CKAD)",
+    img: "https://pbs.twimg.com/profile_images/511909265720614913/21_d3cvM_400x400.png",
   },
   {
     label: "Git",
@@ -144,6 +170,20 @@ function Projects() {
         </Link>{" "}
         account highlights projects I’ve developed using these technologies.
       </Typography>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: 2,
+        }}
+      >
+        {projects.map((project, i) => (
+          <Project project={project} key={i} />
+        ))}
+      </Box>
       <Box display="flex" flexWrap="wrap" gap={2}>
         {technologies.map((tech, index) => (
           <Chip
@@ -160,7 +200,7 @@ function Projects() {
               <img
                 src={tech.img}
                 alt={tech.label}
-                style={{ width: 20, height: 20, marginRight: 2 }}
+                style={{ width: 20, height: "auto", marginRight: 2 }}
               />
             }
           />

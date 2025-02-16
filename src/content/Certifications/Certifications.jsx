@@ -92,19 +92,19 @@ const Certifications = () => {
           <Card
             key={index}
             sx={{
-              width: { xs: "60vw", md: 220 },
+              width: { xs: "60vw", md: "25%", lg: "200px" },
               height: 260, // Set consistent height
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
               alignItems: "center",
-              borderRadius: 1,
+              borderRadius: "16px",
               boxShadow:
                 "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
               borderColor: "text.primary",
               cursor: cert.id ? "pointer" : "default",
-              backgroundColor: "#f5f5f5",
+              backgroundColor: "white",
             }}
             onClick={() => handleCardClick(cert.id)}
           >

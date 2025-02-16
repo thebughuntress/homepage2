@@ -70,8 +70,9 @@ function Hero() {
         sx={{ width: { xs: "90%", md: "60%" }, textAlign: "center" }}
       >
         <b>Hey!</b> I'm a full-stack developer who loves building efficient,
-        scalable, and user-friendly applications that make life easier. I build
-        software and teach programming.
+        scalable, and user-friendly applications that make life easier.
+        Mastering new technologies excites me, and I can become unstoppable when
+        encountering a challenge. I build software and teach programming.
       </Typography>
 
       <DownloadButton

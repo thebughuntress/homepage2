@@ -8,11 +8,11 @@ import {
   useMediaQuery,
   Box,
   Button,
+  Tooltip,
   useTheme,
-  Link,
-  Fab,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import "./AppBar.css";
 
@@ -25,7 +25,13 @@ function AppBar() {
     setOpen(!open);
   };
 
-  const menuLinks = ["About Me", "Experience", "Projects", "Certifications", "Contact"];
+  const menuLinks = [
+    "About Me",
+    "Experience",
+    "Projects",
+    "Certifications",
+    "Contact",
+  ];
 
   const handleScroll = (text) => {
     let id = text.replace(" ", "-").toLowerCase();
@@ -69,8 +75,37 @@ function AppBar() {
                   {text}
                 </Button>
               ))}
+              <Tooltip title="I like coffee!" arrow>
+                <a
+                  href="https://www.buymeacoffee.com/antoniafrey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton
+                    className="coffee-icon"
+                    aria-label="buy-me-a-coffee"
+                    color="white"
+                    sx={{
+                      marginLeft: 2,
+                      border: "2px solid white",
+                      color: "white",
+                      padding: "5px",
+                      borderRadius: "50%",
+                      transition: "0.3s",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.1)", // Subtle hover effect
+                      },
+                    }}
+                  >
+                    <LocalCafeIcon
+                      sx={{ fontSize: "20px" }}
+                    />
+                  </IconButton>
+                </a>
+              </Tooltip>
             </Box>
           )}
+
           {/* Menu Icon for mobile view */}
           {isMobile && (
             <IconButton
@@ -146,7 +181,7 @@ function AppBar() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              height: "15vh",
+              height: "25vh",
             }}
           >
             <Typography variant="h3" className="gradient-text">
