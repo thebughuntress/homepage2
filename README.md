@@ -1,7 +1,12 @@
 # homepage2
 
 This is my new homepage, providing an overview of my skills, contact information, and more.
-The website is deployed [here](https://homepage2-cd7d3.firebaseapp.com/).
+The website is deployed [here](https://antoniaalicefrey.com/).
+
+## Domains
+- [https://antoniaalicefrey.com](https://antoniaalicefrey.com/)
+- [https://homepage2-cd7d3.web.app](https://homepage2-cd7d3.web.app/)
+- [https://homepage2-cd7d3.firebaseapp.com](https://homepage2-cd7d3.firebaseapp.com/)
 
 ## Tech Stack
 

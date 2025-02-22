@@ -13,7 +13,7 @@ function Hero() {
         alignItems: "center",
         flexDirection: "column",
         gap: 2,
-        marginTop: { xs: "-80px", md: "-20px", lg: "-60px" },
+        marginTop: { xs: "-70px", md: "-20px", lg: "-60px" },
       }}
     >
       <Avatar

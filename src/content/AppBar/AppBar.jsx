@@ -184,7 +184,7 @@ function AppBar() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              height: "25vh",
+              height: "35vh",
               width: "80%",
 
               marginBottom: 8,
