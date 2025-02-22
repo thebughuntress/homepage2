@@ -2,6 +2,21 @@ import { Box, Typography, List, ListItem } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import SectionWrapper from "../SectionWrapper/SectionWrapper";
 
+const degrees = [
+  {
+    title: "Master of Science",
+    program: "Electrical Engineering and Information Technology",
+    institution: "Karlsruhe Institute of Technology (KIT)",
+    year: 2020,
+  },
+  {
+    title: "Bachelor of Science",
+    program: "Electrical Engineering and Information Technology",
+    institution: "Karlsruhe Institute of Technology (KIT)",
+    year: 2018,
+  },
+];
+
 function AboutMe() {
   return (
     <SectionWrapper title="About Me" id="about-me">
@@ -16,99 +31,56 @@ function AboutMe() {
 
       <Box sx={{ mt: 2 }}>
         <List sx={{ p: 0 }}>
-          <ListItem
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-              m: 0,
-              p: 0,
-            }}
-          >
-            <Box
+          {degrees.map((degree, index) => (
+            <ListItem
+              key={index}
               sx={{
                 display: "flex",
-                alignItems: "space-between",
+                flexDirection: "column",
+                alignItems: "start",
+                m: 0,
+                p: 0,
+                paddingTop: index !== 0 ? 2 : 0, // Add padding between items
               }}
             >
-              <SchoolIcon
+              <Box
                 sx={{
-                  color: "white",
-                  marginRight: 2,
+                  display: "flex",
+                  alignItems: "space-between",
+                  marginBottom: 1,
                 }}
-              />
-              <Box>
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                  Master of Science
-                </Typography>
-                <Typography
-                  variant="body1"
+              >
+                <SchoolIcon
                   sx={{
-                    fontWeight: 500,
                     color: "white",
+                    marginRight: 2,
                   }}
-                >
-                  Electrical Engineering and Information Technology
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "gray.primary",
-                  }}
-                >
-                  Karlsruhe Institute of Technology (KIT), 2020
-                </Typography>
+                />
+                <Box>
+                  <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                    {degree.title}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontWeight: 700,
+                      color: "white",
+                    }}
+                  >
+                    {degree.program}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "gray.primary",
+                    }}
+                  >
+                    {degree.institution}, {degree.year}
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          </ListItem>
-
-          <ListItem
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-              m: 0,
-              p: 0,
-              paddingTop: 2,
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "space-between",
-                marginBottom: 1,
-              }}
-            >
-              <SchoolIcon
-                sx={{
-                  color: "white",
-                  marginRight: 2,
-                }}
-              />
-              <Box>
-                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                  Bachelor of Science
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 700,
-                    color: "white",
-                  }}
-                >
-                  Electrical Engineering and Information Technology
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "gray.primary",
-                  }}
-                >
-                  Karlsruhe Institute of Technology (KIT), 2018
-                </Typography>
-              </Box>
-            </Box>
-          </ListItem>
+            </ListItem>
+          ))}
         </List>
       </Box>
     </SectionWrapper>

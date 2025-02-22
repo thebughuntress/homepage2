@@ -36,8 +36,12 @@ function AppBar() {
   const handleScroll = (text) => {
     let id = text.replace(" ", "-").toLowerCase();
     const section = document.getElementById(id);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Delay scroll to allow state change (bar closing) to apply first
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 0);
     }
   };
 
@@ -97,9 +101,7 @@ function AppBar() {
                       },
                     }}
                   >
-                    <LocalCafeIcon
-                      sx={{ fontSize: "20px" }}
-                    />
+                    <LocalCafeIcon sx={{ fontSize: "20px" }} />
                   </IconButton>
                 </a>
               </Tooltip>
@@ -153,8 +155,7 @@ function AppBar() {
               <Button
                 key={text}
                 onClick={() => {
-                  // First close the drawer, then scroll to the section
-                  toggleDrawer();
+                  setOpen(!open);
                   handleScroll(text);
                 }}
                 sx={{

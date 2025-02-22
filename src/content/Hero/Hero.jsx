@@ -13,14 +13,14 @@ function Hero() {
         alignItems: "center",
         flexDirection: "column",
         gap: 2,
-        marginTop: { xs: "-80px", md: "-20px" },
+        marginTop: { xs: "-80px", md: "-20px", lg: "-60px" },
       }}
     >
       <Avatar
         sx={{
           bgcolor: "secondary.main",
-          width: "140px",
-          height: "140px",
+          width: { xs: "140px", lg: "200px" },
+          height: { xs: "140px", lg: "200px" },
           p: 2,
         }}
         alt="avatar"
@@ -28,7 +28,7 @@ function Hero() {
       />
       <Typography
         variant="h1"
-        sx={{ fontSize: { xs: "2.2rem", md: "inherit" } }}
+        sx={{ fontSize: { xs: "2.2rem", md: "inherit", lg: "2.8rem" } }}
       >
         Antonia Frey
       </Typography>
@@ -67,7 +67,7 @@ function Hero() {
 
       <Typography
         variant="h5"
-        sx={{ width: { xs: "90%", md: "60%" }, textAlign: "center" }}
+        sx={{ width: { xs: "90%", md: "60%", lg: "40%" }, textAlign: "center" }}
       >
         <b>Hey!</b> I'm a full-stack developer who loves building efficient,
         scalable, and user-friendly applications that make life easier.

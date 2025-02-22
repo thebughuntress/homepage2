@@ -15,31 +15,31 @@ const theme = createTheme({
     text: {
       primary: "#ffffff",
     },
-    gray:{
+    gray: {
       primary: "#f5f5f5",
-    }
+    },
   },
   typography: {
     fontFamily: "'Roboto', sans-serif",
     h1: {
-      fontSize: "3.2rem", // Adjusted size for better readability
+      fontSize: "3.2rem",
       fontWeight: 700,
-      letterSpacing: "0.2px", // Added slight letter spacing for elegance
+      letterSpacing: "0.2px",
     },
     h2: {
-      fontSize: "2.2rem", // Slightly reduced size
+      fontSize: "2.2rem",
       textTransform: "uppercase",
       fontWeight: 700,
-      letterSpacing: "0.3px", // Added letter spacing
+      letterSpacing: "0.3px",
     },
     h3: {
       textTransform: "uppercase",
-      fontSize: "1.8rem", // Adjusted size for more balance
+      fontSize: "1.8rem",
       fontWeight: 700,
-      letterSpacing: "0.4px", // Added letter spacing
+      letterSpacing: "0.4px",
     },
     h4: {
-      fontSize: "1.1rem", // Slight increase to ensure readability
+      fontSize: "1.1rem",
       fontWeight: 500,
     },
     h5: {
@@ -47,14 +47,14 @@ const theme = createTheme({
       fontWeight: 400,
     },
     h6: {
-      fontSize: "0.9rem", // Increased size for clarity
+      fontSize: "0.9rem",
       fontWeight: 400,
     },
     body1: {
-      fontSize: "1rem", // Increased to 0.9rem for better legibility
+      fontSize: "1rem",
     },
     body2: {
-      fontSize: "0.7rem", // Adjusted for consistency
+      fontSize: "0.7rem",
     },
   },
   components: {
@@ -75,8 +75,8 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: "12px", // Retained radius for a smooth card
-          boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)", // Slightly increased shadow for better contrast
+          borderRadius: "12px",
+          boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)",
         },
       },
     },

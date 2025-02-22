@@ -1,13 +1,13 @@
 # homepage2
 
 This is my new homepage, providing an overview of my skills, contact information, and more.
-The website is deployed [here](https://thebughuntress.github.io/homepage2/).
+The website is deployed [here](https://homepage2-cd7d3.firebaseapp.com/).
 
 ## Tech Stack
 
 - **[React](https://react.com) & [Vite](https://vite.dev)** for fast development and efficient bundling
 - **[Material UI](https://mui.com)** for modern UI components
-- **Github Pages** for deployment and hosting
+- **Firebase** for deployment and hosting
 
 ## Useful Links
 
@@ -20,8 +20,13 @@ The website is deployed [here](https://thebughuntress.github.io/homepage2/).
 - [Favicon Generator](https://favicon.io/favicon-generator/)
 - [SVG Waves Generator](https://www.softr.io/tools/svg-wave-generator)
 
+# Deploy React Vite App on Firebase 🔥
+1. Create Firebase Project
+2. Select **Hosting** (not App Hosting)
+3. Set the directory to **dist** (not public)
 
-# Deploy React Vite App to GitHub Pages 🚀 
+---
+# Deploy React Vite App to GitHub Pages 🚀
 
 This guide explains how to deploy a **React Vite** project to **GitHub Pages** in a few simple steps.
 
@@ -97,9 +102,6 @@ This will build the project and push the `dist` folder to a new `gh-pages` branc
 Your React Vite app is now live on GitHub Pages! 🎊
 Your site will be live shortly at:
 🔗 `https://your-username.github.io/your-repo`
-
-
-
 
 
 ## Feedback & Contributions

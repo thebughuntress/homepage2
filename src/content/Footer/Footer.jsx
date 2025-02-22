@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Fab, Link } from "@mui/material";
+import { Box, Typography, Fab } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import BuyMeACoffee from "../BuyMeACoffee/BuyMeACoffee";
 
@@ -49,20 +49,22 @@ function Footer() {
           }}
         >
           <Typography variant="body1">
-            Built with ReactJS, Vite and MUI, deployed on Github Pages.
+            Built with ReactJS, Vite and MUI, deployed on Firebase.
           </Typography>
         </Box>
 
-        <Typography variant="body1" sx={{ fontWeight: "bold", my: 1 }}>
-          <Link
-            href="https:antoniaalicefrey.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            color="inherit"
+        <a
+          href="https://antoniaalicefrey.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Typography
+            variant="body1"
+            sx={{ fontWeight: "bold", my: 1, color: "white" }}
           >
             antoniaalicefrey.com
-          </Link>
-        </Typography>
+          </Typography>
+        </a>
 
         <Typography variant="body2" sx={{ marginTop: 2 }}>
           &copy; {new Date().getFullYear()} Antonia Alice Frey. All rights
