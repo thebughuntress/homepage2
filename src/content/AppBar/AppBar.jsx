@@ -14,6 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import BuyMeACoffee from "../BuyMeACoffee/BuyMeACoffee";
 import "./AppBar.css";
 
 function AppBar() {
@@ -41,7 +42,7 @@ function AppBar() {
       // Delay scroll to allow state change (bar closing) to apply first
       setTimeout(() => {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 0);
+      }, 200);
     }
   };
 
@@ -182,11 +183,41 @@ function AppBar() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              alignItems: "center",
               height: "25vh",
+              width: "80%",
+
+              marginBottom: 8,
             }}
           >
-            <Typography variant="h3" className="gradient-text">
+            <BuyMeACoffee />
+            {/* <Typography variant="h3" className="gradient-text">
               {"<AAF/>"}
+            </Typography> */}
+            <a
+              href="https://antoniaalicefrey.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }} // No underline for the link
+            >
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "bold", my: 0, color: "rgba(0, 0, 0, 1)" }}
+              >
+                antoniaalicefrey.com
+              </Typography>
+            </a>
+
+            <Typography
+              variant="body2"
+              sx={{
+                marginTop: 1,
+                textAlign: "center",
+                color: "rgba(0, 0, 0, 0.5)",
+              }}
+            >
+              &copy; {new Date().getFullYear()} Antonia Alice Frey. <br />
+              All rights reserved.
             </Typography>
           </Box>
         </Box>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
 const BuyMeACoffee = () => {
   return (
@@ -8,7 +8,6 @@ const BuyMeACoffee = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginY: 2,
       }}
     >
       <Box
@@ -29,7 +28,7 @@ const BuyMeACoffee = () => {
           src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=antoniafrey&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
           alt="Buy me a coffee"
           sx={{
-            height: "50px", // Adjust height if needed
+            height: { xs: "40px", md: "50px" }, // Adjust height if needed
             width: "auto",
           }}
         />
