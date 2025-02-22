@@ -15,7 +15,7 @@ const certs = [
   {
     imgUrl:
       "https://images.credly.com/size/340x340/images/37e26478-d80c-43e8-80eb-ec492f3a26c1/image.png",
-    name: "Professional Python Programmer Level 1",
+    name: "Professional Python Programmer Level",
     issuedBy: "Python Institute",
     id: "efb5b4b1-47f8-4cd3-b497-6ab45b427232",
   },
@@ -93,7 +93,7 @@ const Certifications = () => {
             key={index}
             sx={{
               width: { xs: "60vw", md: "25%", lg: "200px" },
-              height: 220, // Set consistent height
+              height: 240, // Set consistent height
               textAlign: "center",
               display: "flex",
               flexDirection: "column",

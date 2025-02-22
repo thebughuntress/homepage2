@@ -39,7 +39,7 @@ const theme = createTheme({
       letterSpacing: "0.4px",
     },
     h4: {
-      fontSize: "1.1rem",
+      fontSize: "1.2rem",
       fontWeight: 500,
     },
     h5: {

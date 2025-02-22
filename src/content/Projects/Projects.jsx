@@ -184,10 +184,16 @@ function Projects() {
           <Project project={project} key={i} />
         ))}
       </Box>
-      <Box display="flex" flexWrap="wrap" gap={2}>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        gap={2}
+        //sx={{justifyContent: "center"}}
+      >
         {technologies.map((tech, index) => (
           <Chip
             sx={{
+              //width: "120px",
               borderRadius: 5, // Add border radius for rounded corners
               borderWidth: 2, // Add border width
               borderStyle: "solid", // Ensure the border is solid
