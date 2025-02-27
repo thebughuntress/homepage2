@@ -21,7 +21,7 @@ function Experience() {
       endDate: "Present",
       company: "Devoteam GmbH",
       position: "Software Engineer (Senior)",
-      location: "Remote | Frankfurt, Germany",
+      location: "Frankfurt, Germany | Remote (100%)",
       image: devoteamLogo,
     },
     {
@@ -62,68 +62,72 @@ function Experience() {
 
   return (
     <SectionWrapper title="Experience" id="experience">
-      <TableContainer>
-        <Table>
-          <TableBody>
-            {experiences.map((exp, index) => (
-              <TableRow
-                key={index}
-                sx={{
-                  borderBottom: "2px solid rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                {/* Image Column */}
-                <TableCell
-                  sx={{ width: "100px", verticalAlign: "center", py: 2 }}
+      <Box sx={{px: {xs: 0, lg: "200px"}}}>
+        <TableContainer>
+          <Table>
+            <TableBody>
+              {experiences.map((exp, index) => (
+                <TableRow
+                  key={index}
+                  sx={{
+                    borderBottom: "2px solid rgba(255, 255, 255, 0.2)",
+                  }}
                 >
-                  <img
-                    src={exp.image}
-                    alt={exp.company}
-                    style={{
-                      width: "100%",
-                      objectFit: "contain",
-                    }}
-                  />
-                </TableCell>
-
-                {/* Content Column */}
-                <TableCell sx={{ paddingX: { xs: "5px", md: "50px" } }}>
-                  <Box
-                    sx={{ display: "flex", flexDirection: "column", gap: 1 }}
+                  {/* Image Column */}
+                  <TableCell
+                    sx={{ width: "100px", verticalAlign: "center", py: 2 }}
                   >
-                    <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-                      {exp.position}
-                    </Typography>
-                    <Typography variant="body1" sx={{ fontStyle: "bold" }}>
-                      {exp.company}
-                    </Typography>
+                    <img
+                      src={exp.image}
+                      alt={exp.company}
+                      style={{
+                        width: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </TableCell>
 
-                    <Typography variant="body1" sx={{ color: "gray.primary" }}>
-                      {exp.startDate} - {exp.endDate}
-                    </Typography>
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <LocationOnIcon
-                        sx={{
-                          fontSize: "20px",
-                          color: "gray.primary",
-                          marginRight: "2px",
-                        }}
-                      />
+                  {/* Content Column */}
+                  <TableCell sx={{ paddingX: { xs: "5px", md: "50px" } }}>
+                    <Box
+                      sx={{ display: "flex", flexDirection: "column", gap: 1 }}
+                    >
+                      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                        {exp.position}
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontStyle: "bold" }}>
+                        {exp.company}
+                      </Typography>
+
                       <Typography
                         variant="body1"
                         sx={{ color: "gray.primary" }}
                       >
-                        {exp.location}
+                        {exp.startDate} - {exp.endDate}
                       </Typography>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <LocationOnIcon
+                          sx={{
+                            fontSize: "20px",
+                            color: "gray.primary",
+                            marginRight: "2px",
+                          }}
+                        />
+                        <Typography
+                          variant="body1"
+                          sx={{ color: "gray.primary" }}
+                        >
+                          {exp.location}
+                        </Typography>
+                      </Box>
                     </Box>
-                  </Box>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
       <Divider />
     </SectionWrapper>
   );

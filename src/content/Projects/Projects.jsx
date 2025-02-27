@@ -13,14 +13,14 @@ const projects = [
   {
     name: "Homepage",
     description:
-      "My personal homepage displaying my technical expertise and projects, built with Vite, React, and JavaScript using Material UI. Deployed on Github Pages and Firebase.",
+      "This homepage, built with Vite, React, and JavaScript using Material UI. Deployed on Firebase.",
     img: "https://jaygould.co.uk/static/a540c5d36e6d0b33716ed77fa4a00bc3/c1b63/react.png",
     repo: "https://github.com/thebughuntress/homepage2",
   },
   {
     name: "Java Calculator-App",
     description:
-      "Simple calculator application built with Java. It performs basic  arithmetic operations like addition, subtraction, multiplication, and division.",
+      "Simple calculator application built with Java. It performs all the basic arithmetic operations.",
     img: "https://raw.githubusercontent.com/thebughuntress/calculator-app/main/images/calculator-app.png",
     repo: "https://github.com/thebughuntress/calculator-app",
   },
@@ -170,20 +170,6 @@ function Projects() {
         </Link>{" "}
         account highlights projects I’ve developed using these technologies.
       </Typography>
-
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          gap: 2,
-        }}
-      >
-        {projects.map((project, i) => (
-          <Project project={project} key={i} />
-        ))}
-      </Box>
       <Box
         display="flex"
         flexWrap="wrap"
@@ -210,6 +196,20 @@ function Projects() {
               />
             }
           />
+        ))}
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: 2,
+          my: 2,
+        }}
+      >
+        {projects.map((project, i) => (
+          <Project project={project} key={i} />
         ))}
       </Box>
     </SectionWrapper>

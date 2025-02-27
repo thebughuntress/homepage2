@@ -13,7 +13,7 @@ function Hero() {
         alignItems: "center",
         flexDirection: "column",
         gap: 2,
-        marginTop: { xs: "-70px", md: "-20px", lg: "-60px" },
+        marginTop: { xs: "-80px", md: "-20px", lg: "-60px" },
       }}
     >
       <Avatar
@@ -22,6 +22,9 @@ function Hero() {
           width: { xs: "140px", lg: "200px" },
           height: { xs: "140px", lg: "200px" },
           p: 2,
+          "& img": {
+            transform: "translateY(5%)", // Adjust this to move the image down
+          },
         }}
         alt="avatar"
         src={avatar}
@@ -71,9 +74,8 @@ function Hero() {
       >
         <b>Hey!</b> I'm a full-stack developer who loves building efficient,
         scalable, and user-friendly applications that make life easier.
-        Mastering new technologies drives me, and I can become
-        unstoppable when encountering a challenge. I build software and teach
-        programming.
+        Mastering new technologies drives me, and I can become unstoppable when
+        encountering a challenge. I build software and teach programming.
       </Typography>
 
       <DownloadButton

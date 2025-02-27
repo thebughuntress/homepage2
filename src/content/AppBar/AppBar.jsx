@@ -53,6 +53,7 @@ function AppBar() {
         sx={{
           backgroundColor: theme.palette.background.default,
           py: 1,
+          boxShadow: "none",
         }}
       >
         <Toolbar>
@@ -171,10 +172,10 @@ function AppBar() {
             ))}
             <IconButton
               aria-label="close-appbar"
-              color="black"
               onClick={toggleDrawer}
+              sx={{ color: "black" }}
             >
-              <KeyboardDoubleArrowRightIcon />
+              <KeyboardDoubleArrowRightIcon sx={{ color: "black" }} />
             </IconButton>
           </Box>
           <Box sx={{ flexGrow: 1 }} /> {/* Spacer to push content down */}

@@ -93,7 +93,7 @@ const Certifications = () => {
             key={index}
             sx={{
               width: { xs: "60vw", md: "25%", lg: "200px" },
-              height: 240, // Set consistent height
+              height: {xs: 220, md: 240}, // Set consistent height
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
@@ -116,10 +116,10 @@ const Certifications = () => {
               sx={{
                 objectFit: "contain",
                 backgroundColor: "transparent",
-                paddingY: 2,
+                paddingY: {xs: 2, md: 1},
               }}
             />
-            <CardContent sx={{ color: "black", m: 0, p: 1, paddingX: 2 }}>
+            <CardContent sx={{ color: "black", m: 0, p: 0, paddingX: 2 }}>
               <Typography variant="h4" sx={{ fontWeight: 700 }}>
                 {cert.name}
               </Typography>

@@ -16,10 +16,13 @@ function Footer() {
       <Box
         component="footer"
         sx={{
-          backgroundColor: "black",
+          //backgroundColor: "#1a1a1a",
+          background: "linear-gradient(131deg, #9c83ff 10%, #b89cff 30%, #e0f010 55%, #f5b342 75%, #ff9051 90%)",
+
           padding: "20px",
           textAlign: "center",
           marginTop: 5,
+          color: "black"
         }}
       >
         {/* Scroll to Top Button */}
@@ -57,16 +60,17 @@ function Footer() {
           href="https://antoniaalicefrey.com/"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ textDecoration: "none" }} // No underline for the link
         >
           <Typography
             variant="body1"
-            sx={{ fontWeight: "bold", my: 1, color: "white" }}
+            sx={{ fontWeight: "bold", my: 1 }}
           >
             antoniaalicefrey.com
           </Typography>
         </a>
 
-        <Typography variant="body2" sx={{ marginTop: 2 }}>
+        <Typography variant="body2" sx={{ marginTop: 2, color: "white" }}>
           &copy; {new Date().getFullYear()} Antonia Alice Frey. All rights
           reserved.
         </Typography>

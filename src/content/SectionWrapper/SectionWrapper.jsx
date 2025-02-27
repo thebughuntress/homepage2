@@ -33,7 +33,7 @@ function SectionWrapper({ title, id, children }) {
           flexDirection: "column",
           gap: 2,
           //backgroundColor: "red",
-          width: { xs: "90%", md: "70%" },
+          width: { xs: "90%", md: "70%", lg: "70%" },
         }}
       >
         {children}
