@@ -46,6 +46,20 @@ function AppBar() {
     }
   };
 
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "AAF",
+          text: "Check this out!",
+          url: window.location.href,
+        })
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+      alert("Web Share API not supported in this browser.");
+    }
+  };
+
   return (
     <>
       <MuiAppBar
@@ -58,7 +72,12 @@ function AppBar() {
       >
         <Toolbar>
           {/* Left Side: Name */}
-          <Typography variant="h3" className="gradient-text">
+          <Typography
+            variant="h3"
+            className="gradient-text"
+            sx={{ cursor: "pointer" }}
+            onClick={handleShare}
+          >
             {"<AAF/>"}
           </Typography>
           {/* Right Side: Links on larger screens */}

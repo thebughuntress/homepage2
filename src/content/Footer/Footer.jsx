@@ -18,7 +18,6 @@ function Footer() {
         sx={{
           //backgroundColor: "#1a1a1a",
           background: "linear-gradient(131deg, #9c83ff 10%, #b89cff 30%, #e0f010 55%, #f5b342 75%, #ff9051 90%)",
-
           padding: "20px",
           textAlign: "center",
           marginTop: 5,

@@ -15,15 +15,17 @@
 .gradient-text {
   background: linear-gradient(
     131deg,
-    rgb(156, 131, 255) 12%,
-    rgba(224, 240, 16, 0.94) 70%,
-    rgb(255, 144, 81) 75%
+    #9c83ff 10%,
+    #b89cff 30%,
+    #e0f010 55%,
+    #f5b342 75%,
+    #ff9051 90%
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  animation: gradientMove 4s linear infinite;
+  animation: gradientMove 15s linear infinite;
   flex-grow: 1;
   font-size: 1.4rem;
   font-weight: 800;
