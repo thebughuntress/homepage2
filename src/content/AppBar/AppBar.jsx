@@ -28,6 +28,7 @@ function AppBar() {
 
   const menuLinks = [
     "About Me",
+    "Classes",
     "Experience",
     "Projects",
     "Certifications",

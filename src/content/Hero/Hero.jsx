@@ -1,6 +1,7 @@
 import { Box, Button, Typography, Avatar } from "@mui/material";
 import DownloadButton from "../DownloadButton/DownloadButton";
 import avatar from "../../assets/woman-technologist_1f469-200d-1f4bb.png";
+//import avatar from "../../assets/girl-with-laptop.jpg";
 import cvFallback from "../../assets/CV_AntoniaFrey.pdf";
 
 function Hero() {
@@ -22,9 +23,6 @@ function Hero() {
           width: { xs: "140px", lg: "200px" },
           height: { xs: "140px", lg: "200px" },
           p: 2,
-          "& img": {
-            transform: "translateY(5%)", // Adjust this to move the image down
-          },
         }}
         alt="avatar"
         src={avatar}
@@ -75,13 +73,13 @@ function Hero() {
         <b>Hey!</b> I'm a full-stack developer who loves building efficient,
         scalable, and user-friendly applications that make life easier.
         Mastering new technologies drives me, and I can become unstoppable when
-        encountering a challenge. I build software and teach programming.
+        encountering a challenge.
       </Typography>
 
       <DownloadButton
         label="Download CV"
         color="primary.main"
-        url="https://raw.githubusercontent.com/thebughuntress/cv-latex/main/cv-john-miller/cv.pdf"
+        url="https://raw.githubusercontent.com/thebughuntress/cv-overleaf/main/m cv.pdf"
         downloadFileName="CV_AntoniaFrey.pdf"
         fallbackFile={cvFallback}
       />

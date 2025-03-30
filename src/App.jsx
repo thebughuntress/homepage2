@@ -12,6 +12,7 @@ import Experience from "./content/Experience/Experience";
 import Contact from "./content/Contact/Contact";
 import Projects from "./content/Projects/Projects";
 import Certifications from "./content/Certifications/Certifications";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   return (

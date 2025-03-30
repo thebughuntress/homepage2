@@ -1,41 +1,56 @@
 import React from "react";
-import { Button, useMediaQuery, useTheme } from "@mui/material";
+import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 const DownloadButton = ({ label, downloadFileName, url, fallbackFile }) => {
   const handleDownload = async () => {
+    if (!url) {
+      console.warn("URL is missing. Attempting to download fallback file...");
+      downloadFallback();
+      return;
+    }
+
     try {
       // Fetch the file from the specified URL
       const response = await fetch(url);
       if (!response.ok) {
-        throw new Error(`Download from ${fileUrl} failed...`);
+        throw new Error(`Download from ${url} failed...`);
       }
 
       // Create a blob from the response and trigger the download
       const blob = await response.blob();
-      const link = document.createElement("a");
-      link.download = downloadFileName;
-      const objectUrl = URL.createObjectURL(blob);
-      link.href = objectUrl;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(objectUrl);
+      triggerDownload(blob, downloadFileName);
     } catch (error) {
-      console.info("Downloading fallback file");
-
-      try {
-        // Attempt fallback file download
-        const link = document.createElement("a");
-        link.download = downloadFileName;
-        link.href = fallbackFile;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch {
-        console.error("Error downloading or saving the file:", error);
-      }
+      console.warn("Download failed. Falling back...", error);
+      downloadFallback();
     }
+  };
+
+  // Helper function to trigger file download
+  const triggerDownload = (blob, filename) => {
+    const link = document.createElement("a");
+    const objectUrl = URL.createObjectURL(blob);
+    link.href = objectUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(objectUrl);
+  };
+
+  // Helper function for fallback file download
+  const downloadFallback = () => {
+    if (!fallbackFile) {
+      console.error("No fallback file available.");
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = fallbackFile;
+    link.download = downloadFileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

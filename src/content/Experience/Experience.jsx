@@ -24,7 +24,7 @@ function Experience() {
       location: "Frankfurt, Germany | Remote (100%)",
       image: devoteamLogo,
     },
-    {
+    /* {
       startDate: "2010",
       endDate: "Present",
       company: "Superprof",
@@ -32,7 +32,7 @@ function Experience() {
       location: "Remote",
       image:
         "https://s3-eu-west-1.amazonaws.com/tpd/logos/5e5d075094f7cb00015e5dca/0x0.png",
-    },
+    }, */
     {
       startDate: "Jan. 2021",
       endDate: "Jan. 2022",
