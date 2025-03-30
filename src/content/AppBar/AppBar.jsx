@@ -103,7 +103,7 @@ function AppBar() {
               ))}
               <Tooltip title="I like coffee!" arrow>
                 <a
-                  href="https://www.buymeacoffee.com/antoniafrey"
+                  href="https://www.buymeacoffee.com/alicecodes"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

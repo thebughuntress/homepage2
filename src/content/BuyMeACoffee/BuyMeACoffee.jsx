@@ -12,7 +12,7 @@ const BuyMeACoffee = () => {
     >
       <Box
         component="a"
-        href="https://www.buymeacoffee.com/antoniafrey"
+        href="https://www.buymeacoffee.com/alicecodes"
         target="_blank"
         rel="noopener noreferrer"
         sx={{
