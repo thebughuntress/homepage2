@@ -1,5 +1,6 @@
 import { Card, CardMedia, Typography, Box, Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkIcon from '@mui/icons-material/Link';
 
 const Project = ({ project }) => {
   return (
@@ -15,7 +16,7 @@ const Project = ({ project }) => {
         key={project.name}
         sx={{
           width: { xs: "80vw", md: "400px" },
-          height: {xs: 240, md: 200}, // Set consistent height
+          minHeight: { xs: 240, md: 200 }, // Set consistent height
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
@@ -27,7 +28,7 @@ const Project = ({ project }) => {
           borderColor: "text.primary",
           backgroundColor: "white",
           color: "black",
-          p: 1
+          p: 1,
         }}
       >
         <CardMedia
@@ -35,10 +36,10 @@ const Project = ({ project }) => {
           image={project.img}
           alt="Calculator App"
           sx={{
-            height: "40%",
+            height: "120px",
             width: "auto",
             objectFit: "contain",
-            p:1
+            p: 2,
           }}
         />
 
@@ -60,14 +61,26 @@ const Project = ({ project }) => {
           >
             {project.description}
           </Typography>
-          <Button
-            startIcon={<GitHubIcon sx={{ fontSize: "0.875rem" }} />}
-            size="small"
-            sx={{ color: "black", fontSize: "0.8rem", p: 0, px: 1, m: 1 }}
-            onClick={() => window.open(project.repo, "_blank")}
-          >
-            Show on Github
-          </Button>
+          {project.repo && project.repo !== "" && (
+            <Button
+              startIcon={<GitHubIcon sx={{ fontSize: "0.875rem" }} />}
+              size="small"
+              sx={{ color: "black", fontSize: "0.8rem", p: 0, px: 1, m: 1 }}
+              onClick={() => window.open(project.repo, "_blank")}
+            >
+              Show on Github
+            </Button>
+          )}
+          {project.url && project.url !== "" && (
+            <Button
+              startIcon={<LinkIcon sx={{ fontSize: "0.875rem" }} />}
+              size="small"
+              sx={{ color: "black", fontSize: "0.8rem", p: 0, px: 1, m: 1 }}
+              onClick={() => window.open(project.url, "_blank")}
+            >
+              Show here
+            </Button>
+          )}
         </Box>
       </Card>
     </Box>

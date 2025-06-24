@@ -5,29 +5,39 @@ import { Typography, Box, Chip, Link } from "@mui/material";
 const projects = [
   {
     name: "Flappy Bird",
-    description: "ML projects for practicing and learning different models and techniques",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
-    repo: "https://github.com/thebughuntress/ml",
+    description:
+      "A Flappy Bird clone built using Pygame Zero, a wrapper around the Pygame engine. Covers creating a side-scrolling game with animated backgrounds, realistic bird physics, obstacle generation, collision detection, and a scoring system. Built by following the 'Pygame Zero: Flappy Bird Tutorial'.",
+    img: "https://cdn.neowin.com/news/images/uploaded/2025/04/1746001654_flappy_bird_android_epic_games_store_full.jpg",
+    repo: "https://github.com/thebughuntress/flappy-bird",
   },
   {
     name: "Machine Learning / AI",
-    description: "ML projects for practicing and learning different models and techniques",
+    description:
+      "ML projects for practicing and learning different models and techniques",
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
     repo: "https://github.com/thebughuntress/ml",
   },
   {
-    name: "Django Portfolio Page",
+    name: "Django Blog Page",
     description:
       "Django-based web application, this project includes a blog where you can read posts.",
-    img: "https://automationpanda.com/wp-content/uploads/2017/09/django-logo-negative.png",
+    img: "https://inspector.dev/wp-content/uploads/2023/04/logo-python-django.png",
     repo: "https://github.com/thebughuntress/my-django-site",
   },
   {
-    name: "Homepage",
+    name: "Homepage (antoniaalicefrey.com)",
     description:
       "This homepage, built with Vite, React, and JavaScript using Material UI. Deployed on Firebase.",
-    img: "https://jaygould.co.uk/static/a540c5d36e6d0b33716ed77fa4a00bc3/c1b63/react.png",
+    img: "https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg",
     repo: "https://github.com/thebughuntress/homepage2",
+  },
+  {
+    name: "Previous Homepage (Outdated)",
+    description:
+      "Homepage, built with Vite, React, and JavaScript using Material UI. Deployed on Firebase.",
+    img: "https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-standard.svg",
+    repo: "",
+    url: "https://homepage-bdc65.web.app/"
   },
   {
     name: "Java Calculator-App",
