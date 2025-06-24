@@ -4,6 +4,12 @@ import { Typography, Box, Chip, Link } from "@mui/material";
 
 const projects = [
   {
+    name: "Flappy Bird",
+    description: "ML projects for practicing and learning different models and techniques",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
+    repo: "https://github.com/thebughuntress/ml",
+  },
+  {
     name: "Machine Learning / AI",
     description: "ML projects for practicing and learning different models and techniques",
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
